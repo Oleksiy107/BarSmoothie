@@ -1,0 +1,42 @@
+.statistics {
+  background-image: url("/static/images/statisticsBg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top left;
+  padding: 125px 0;
+  color: white;
+
+  &__list {
+    display: flex;
+    gap: 30px;
+    justify-content: space-evenly;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    max-width: 203px;
+    text-align: center;
+    flex: 1;
+  }
+
+  &__item-number {
+    font-size: 55px;
+    font-weight: 600;
+  }
+
+  &__item-line {
+    width: 42px;
+    height: 1px;
+    background-color: #fff;
+  }
+
+  &__item-text {
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 1.7;
+  }
+}

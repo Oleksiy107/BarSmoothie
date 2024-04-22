@@ -1,0 +1,19 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", "Lato", sans-serif;
+  position: relative;
+}
+
+#root {
+  padding-top: 35px;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+}

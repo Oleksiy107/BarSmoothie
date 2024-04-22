@@ -1,0 +1,45 @@
+.page-intro {
+  padding: 100px 0;
+  background-image: url("/static/images/about-us-bg.jpg");
+  color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  background-position: center;
+
+  & .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+  }
+
+  &__bg-shadow {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(22, 36, 43, 0.3);
+    z-index: 2;
+  }
+
+  &__title {
+    font-size: 45px;
+    text-shadow: 3px 9px 16px rgba(0, 0, 0, 0.18);
+    text-transform: capitalize;
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 1.66667;
+    max-width: 500px;
+    text-align: center;
+  }
+}

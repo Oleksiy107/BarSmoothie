@@ -1,0 +1,158 @@
+.page-foot {
+  border-top: 1px solid #e1e1e1;
+  color: #151515;
+  font-family: "Lato";
+  font-size: 15px;
+
+  &__content-block {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 96px 0;
+  }
+
+  &__contacts-title,
+  &__newsletter-title {
+    font-family: "Poppins";
+    margin-bottom: 35px;
+    font-weight: 600;
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+
+  &__common-info {
+    width: 100%;
+    max-width: 370px;
+  }
+
+  &__contacts {
+    width: 100%;
+    max-width: 370px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__contacts-list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 20px;
+  }
+
+  &__contact-icon {
+    display: none;
+  }
+
+  &__contacts-item {
+    display: flex;
+    gap: 20px;
+    line-height: 1.6;
+  }
+
+  &__contact-text {
+    max-width: 265px;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &__newsletter {
+    width: 100%;
+    max-width: 370px;
+  }
+
+  &__newsletter-text {
+    color: #777777;
+    line-height: 1.6;
+    margin-bottom: 35px;
+  }
+
+  &__logo-link {
+    margin-bottom: 35px;
+    display: flex;
+  }
+
+  &__schedule {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  &__schedule-time {
+    margin-left: 20px;
+    color: #777777;
+  }
+
+  &__line {
+    height: 1px;
+    width: 100%;
+    background-color: #e1e1e1;
+    margin-bottom: 20px;
+    max-width: 303px;
+  }
+
+  &__social {
+    display: flex;
+    gap: 35px;
+  }
+
+  &__social-list {
+    list-style: none;
+    display: flex;
+    gap: 18px;
+  }
+
+  &__input-holder {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__input {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #e1e1e1;
+    padding: 17px 0;
+    color: #151515;
+    width: 100%;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+
+    &::placeholder {
+      color: #151515;
+    }
+  }
+
+  &__button {
+    min-width: 60px;
+    max-width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: #e9da5d;
+  }
+
+  &__copyright-block {
+    padding: 40px 0;
+    background-color: #f5f5f5;
+  }
+
+  &__copyright-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+
+  &__copyright-text {
+    color: #777777;
+    font-family: "Poppins";
+  }
+
+  &__payments-list {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+  }
+}

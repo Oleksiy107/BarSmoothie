@@ -1,0 +1,21 @@
+.scroll-to-top {
+  width: 49px;
+  height: 49px;
+  background-color: #76aa6f;
+  border-radius: 50%;
+  position: fixed;
+  right: 20px;
+  bottom: -100px;
+  transition: all ease-in-out 0.3s;
+  font-size: 30px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(-90deg);
+  cursor: pointer;
+
+  &.to-top-active {
+    bottom: 20px;
+  }
+}

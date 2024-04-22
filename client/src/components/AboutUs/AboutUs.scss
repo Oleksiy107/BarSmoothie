@@ -1,0 +1,53 @@
+.about-us {
+  padding: 50px;
+
+  &__box {
+    flex-direction: row;
+    display: flex;
+    gap: 50px;
+    margin-bottom: 35px;
+
+    &:nth-child(2) {
+      flex-direction: row-reverse;
+
+      .about-us__img {
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        max-width: 600px;
+      }
+
+      .about-us__text {
+        text-align: end;
+      }
+    }
+  }
+
+  &__img {
+    display: flex;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    max-width: 300px;
+    overflow: hidden;
+  }
+
+  &__info {
+    max-width: 60%;
+  }
+
+  &__title {
+    font-size: 32px;
+    color: #151515;
+    font-weight: 600;
+    margin-bottom: 35px;
+  }
+
+  &__text {
+    font-size: 22px;
+    color: #151515;
+    line-height: 1.5;
+  }
+}

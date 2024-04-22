@@ -1,0 +1,39 @@
+.our-advantages {
+  display: flex;
+  gap: 10px;
+
+  &_reverse {
+    flex-direction: row-reverse;
+  }
+
+  &__text-block {
+    max-width: 265px;
+
+    &_reverse {
+      text-align: end;
+    }
+  }
+
+  &__title {
+    color: #151515;
+    font-weight: 600;
+    margin-bottom: 23px;
+    font-size: 24px;
+  }
+
+  &__text {
+    color: #777777;
+    line-height: 1.6;
+    font-size: 15px;
+  }
+
+  &__img-wrap {
+    min-width: 88px;
+    height: 88px;
+    background-color: #e9da5d;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

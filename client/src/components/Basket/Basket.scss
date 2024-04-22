@@ -1,0 +1,363 @@
+.basket {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.64);
+  transition: all ease-in-out 0.3s;
+  opacity: 0;
+  color: #151515;
+
+  &.active {
+    opacity: 1;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    max-width: 430px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: -430px;
+    top: 0;
+    background-color: white;
+    transition: all ease-in-out 0.3s;
+
+    &.active {
+      right: 0;
+    }
+
+    &.empty {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    padding: 24px 24px 6px;
+    background-image: url("/static/images/dottedBackground.jpg");
+  }
+
+  &__list {
+    flex-grow: 1;
+  }
+
+  &__purchase {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    background-image: url("/static/images/dottedBackground.jpg");
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    position: relative;
+  }
+
+  &__item-info {
+    display: flex;
+    gap: 15px;
+  }
+
+  &__item-image {
+    max-width: 100px;
+    min-width: 100px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    height: 150px;
+
+    & img {
+      object-fit: cover;
+      transform: scale(1.2);
+    }
+  }
+
+  &__list {
+    overflow-y: scroll;
+    padding: 15px 0 15px 15px;
+
+    &::-webkit-scrollbar {
+      width: 1px;
+    }
+  }
+
+  &__item-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__item-portion {
+    font-size: 15px;
+    color: #777777;
+  }
+
+  &__item-ingredients-list {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    font-size: 15px;
+    color: #777777;
+  }
+
+  &__item-utils {
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 15px;
+  }
+
+  &__item-price {
+    font-size: 20px;
+    color: #151515;
+    font-weight: 600;
+
+    span {
+      font-size: 24px;
+      color: rgb(194, 64, 64);
+    }
+  }
+
+  &__item-counts {
+    width: 96px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item-count-number {
+    background-color: rgb(243, 243, 247);
+    height: 100%;
+    width: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__item-button {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(243, 243, 247);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 0 8px;
+    width: 34px;
+    height: 100%;
+    font-size: 25px;
+    font-weight: 500;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+
+    &:nth-child(3) {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  &__total-smoothies {
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+
+  &__total-price {
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+
+  &__purchase-button {
+    padding: 12px 54px 12px 48px;
+    border: 1px solid #777777;
+    outline: none;
+    background-color: #f9e95e;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+  }
+
+  &__remove-item {
+    padding: 15px;
+    position: absolute;
+    top: 0;
+    right: 15px;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      background-color: #151515;
+      width: 25px;
+      height: 4px;
+      position: absolute;
+      border-radius: 5px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &::after {
+      content: "";
+      background-color: #151515;
+      width: 25px;
+      height: 4px;
+      position: absolute;
+      border-radius: 5px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+
+  &__empty-basket {
+    max-width: 50%;
+    text-align: center;
+  }
+
+  &__empty-basket-text {
+    font-size: 14px;
+    color: #151515;
+    margin-bottom: 15px;
+  }
+
+  &__empty-basket-button {
+    padding: 8px 20px;
+    border: 1px solid #777777;
+    outline: none;
+    background-color: #f9e95e;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+  }
+
+  &__remove-alert {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all ease-in-out 0.3s;
+    opacity: 0;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  &__remove-alert-text {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+
+  &__remove-btn-holder {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__remove-btn {
+    padding: 8px 40px;
+    border: 1px solid #777777;
+    outline: none;
+    background-color: #f9e95e;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+  }
+
+  &__form {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    background-color: #f9e95e;
+    padding: 35px 25px;
+    border-radius: 30px;
+    z-index: 3;
+  }
+
+  &__pair {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+
+  &__radio-box {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  &__form-purchase {
+    padding: 8px 40px;
+    border: 1px solid #777777;
+    outline: none;
+    background-color: #f9e95e;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+  }
+
+  &__input {
+    padding: 5px;
+  }
+
+  &__backdrop {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(5px);
+  }
+
+  &__user-info {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 400px;
+    background-color: #f9e95e;
+    padding: 35px 25px;
+    backdrop-filter: blur(5px);
+    border-radius: 30px;
+    z-index: 3;
+  }
+}

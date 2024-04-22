@@ -1,0 +1,51 @@
+.home-title {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("/static/images/home-bg.jpg");
+  min-height: 670px;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+
+  &__title {
+    font-size: 55px;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+    color: white;
+    font-weight: 600;
+  }
+
+  &__text {
+    font-size: 18px;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+    line-height: 1.7;
+    max-width: 760px;
+    text-align: center;
+    color: white;
+  }
+
+  &__button {
+    padding: 26px 50px;
+    font-size: 14px;
+    color: rgb(21, 21, 21);
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 6px;
+    background-color: #f9e95e;
+    border: 2px solid transparent;
+    outline: none;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.17) 2px 3px 10px 0px;
+    margin-bottom: 125px;
+    transition: all ease-in-out 0.3s;
+    text-decoration: none;
+
+    &:hover {
+      background-color: #fff773;
+      border: 2px solid #f9e95e;
+    }
+  }
+}
